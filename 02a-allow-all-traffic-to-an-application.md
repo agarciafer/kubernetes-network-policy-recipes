@@ -9,11 +9,11 @@ Applying this policy makes any other policies restricting the traffic to the pod
 void, and allow all traffic to it from its namespace and other namespaces.
 
 ## Example
-
 Start a `web` application:
+```yaml
 kubectl get netpol
 kubectl run  web --image=nginx --labels=app=web --expose --port 80
-
+```
 Save the following manifest to `web-allow-all.yaml`:
 
 ```yaml
