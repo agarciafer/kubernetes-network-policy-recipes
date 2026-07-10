@@ -14,7 +14,7 @@ certain Pods.
 
 Suppose your application is a REST API server, marked with labels `app=bookstore` and `role=api`:
 
-    kubectl run  --image=nginx --labels app=bookstore,role=api --expose --port 80
+    kubectl run  test-$RANDOM --image=nginx --labels app=bookstore,role=api --expose --port 80
 
 Save the following NetworkPolicy to `api-allow.yaml` to restrict the access
 only to other pods (e.g. other microservices) running with label `app=bookstore`:
